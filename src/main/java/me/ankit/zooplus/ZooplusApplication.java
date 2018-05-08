@@ -3,10 +3,8 @@ package me.ankit.zooplus;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import me.ankit.zooplus.log.Ilogging;
-
 @SpringBootApplication
-public class ZooplusApplication implements Ilogging {
+public class ZooplusApplication implements ILogging {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ZooplusApplication.class, args);

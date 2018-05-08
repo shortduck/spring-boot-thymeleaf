@@ -1,9 +1,9 @@
-package me.ankit.zooplus.log;
+package me.ankit.zooplus;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public interface Ilogging {
+public interface ILogging {
 
 	// TODO: Currently logger always shows "me.ankit.zooplus.log.Ilogging",
 	// it should be changed to show the actual filename.
