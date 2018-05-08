@@ -10,4 +10,8 @@ public interface Ilogging {
 
 	static final Logger Log = LogManager.getLogger();
 	
+//	public static void LogInfo(String className, String methodName) {
+//		Log.info("Class Name: " + className + ", Method Name:" + methodName);		
+//	}
+	
 }

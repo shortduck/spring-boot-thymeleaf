@@ -15,8 +15,7 @@ public class ZooplusApplication implements Ilogging {
 		Log.error("Test - error");
 		Log.info("Test - info");
 		Log.trace("Test - trace");
-		
-		
+			
 	}
 
 }
