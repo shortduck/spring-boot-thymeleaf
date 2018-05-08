@@ -9,13 +9,16 @@ import me.ankit.zooplus.log.Ilogging;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ZooplusApplicationTests implements Ilogging {
-
+public class logTest extends baseTest implements Ilogging{
+	
 	@Test
-	public void contextLoads() {
-		System.out.println("in ZooplusApplicationTests.");
-		Log.debug("ZooplusApplicationTests: Hello this is a debug message");
-		Log.info("ZooplusApplicationTests :Hello this is an info message");
+	public void testLogFile() {
+		
+		//TODO: Why only info is getting logged ?
+		Log.debug("logTest: Hello this is a debug message");
+		Log.info("logTest: Hello this is an info message");
 	}
+	
+	
 
 }
