@@ -3,6 +3,6 @@ package me.ankit.zooplus;
 public interface Iconstants {
 
 	public enum PAGES {
-		REGISTER, HOME, LOGIN, CONVERT;
+		REGISTER, HOME, LOGIN, CONVERT, USERS;
 	}
 }

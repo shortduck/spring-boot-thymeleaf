@@ -4154,3 +4154,590 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2018-05-10 12:50:42.458  INFO 15836 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2018-05-10 12:50:42.464  INFO 15836 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2018-05-10 12:50:42.546  INFO 15836 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-10 13:07:56.746  INFO 23156 --- [main] me.ankit.zooplus.logTest                 : Starting logTest on T60841YJKP32 with PID 23156 (started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 13:07:56.791  INFO 23156 --- [main] me.ankit.zooplus.logTest                 : No active profile set, falling back to default profiles: default
+2018-05-10 13:07:56.897  INFO 23156 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:07:56 EDT 2018]; root of context hierarchy
+2018-05-10 13:08:00.307  INFO 23156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54fd1f04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 13:08:01.122  INFO 23156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 13:08:13.138 ERROR 23156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@24d719b2[file =C:\___\java\zooplus-SpringBoot\zooplus\src\main\resources\db\userx.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2018-05-10 17:08:11 heartbeat - read: -724 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-2.7.8.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:318) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:355) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:169) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d3e173.CGLIB$jpaVendorAdapter$6(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d3e173$$FastClassBySpringCGLIB$$73f7ca2.invoke(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d3e173.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_71]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_71]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_71]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_71]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138) ~[spring-boot-test-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) ~[surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) ~[surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) ~[surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) ~[surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@24d719b2[file =C:\___\java\zooplus-SpringBoot\zooplus\src\main\resources\db\userx.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2018-05-10 17:08:11 heartbeat - read: -724 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	... 102 common frames omitted
+
+2018-05-10 13:08:13.153  WARN 23156 --- [main] o.s.b.a.orm.jpa.DatabaseLookup           : Unable to determine jdbc url from datasource
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@24d719b2[file =C:\___\java\zooplus-SpringBoot\zooplus\src\main\resources\db\userx.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2018-05-10 17:08:11 heartbeat - read: -724 ms.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:327) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:355) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72) ~[spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:169) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d3e173.CGLIB$jpaVendorAdapter$6(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d3e173$$FastClassBySpringCGLIB$$73f7ca2.invoke(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d3e173.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_71]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_71]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_71]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_71]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138) ~[spring-boot-test-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) ~[surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) ~[surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) ~[surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) ~[surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) ~[surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@24d719b2[file =C:\___\java\zooplus-SpringBoot\zooplus\src\main\resources\db\userx.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2018-05-10 17:08:11 heartbeat - read: -724 ms.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:318) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 87 common frames omitted
+Caused by: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@24d719b2[file =C:\___\java\zooplus-SpringBoot\zooplus\src\main\resources\db\userx.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2018-05-10 17:08:11 heartbeat - read: -724 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-2.7.8.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 88 common frames omitted
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@24d719b2[file =C:\___\java\zooplus-SpringBoot\zooplus\src\main\resources\db\userx.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2018-05-10 17:08:11 heartbeat - read: -724 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.4.0.jar:2.4.0]
+	... 102 common frames omitted
+
+2018-05-10 13:08:13.438  INFO 23156 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:08:13.586  INFO 23156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 13:08:14.118  INFO 23156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 13:08:14.118  INFO 23156 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 13:08:14.419  INFO 23156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 13:08:15.042  INFO 23156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 13:10:51.088  INFO 20812 --- [main] me.ankit.zooplus.logTest                 : Starting logTest on T60841YJKP32 with PID 20812 (started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 13:10:51.091  INFO 20812 --- [main] me.ankit.zooplus.logTest                 : No active profile set, falling back to default profiles: default
+2018-05-10 13:10:51.192  INFO 20812 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:10:51 EDT 2018]; root of context hierarchy
+2018-05-10 13:10:55.801  INFO 20812 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$77a338c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 13:10:56.679  INFO 20812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 13:10:58.069  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : Checkpoint start
+2018-05-10 13:10:58.070  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose start
+2018-05-10 13:10:58.084  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose synched
+2018-05-10 13:10:58.159  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose script done
+2018-05-10 13:10:58.364  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose end
+2018-05-10 13:10:58.368  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : Checkpoint end - txts: 1
+2018-05-10 13:10:58.511  INFO 20812 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-10 13:10:58.514  INFO 20812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-10 13:10:58.664  INFO 20812 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:10:58.709  INFO 20812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 13:10:58.932  INFO 20812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 13:10:58.937  INFO 20812 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 13:10:59.045  INFO 20812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 13:10:59.407  INFO 20812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-10 13:11:01.979  INFO 20812 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@716185fe'
+2018-05-10 13:11:01.983  INFO 20812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:11:04.300  INFO 20812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:11:05.755  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:10:51 EDT 2018]; root of context hierarchy
+2018-05-10 13:11:05.959  WARN 20812 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-10 13:11:06.078  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.ConvertController.newUser()
+2018-05-10 13:11:06.080  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String me.ankit.zooplus.controller.HomeController.home()
+2018-05-10 13:11:06.082  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /]}" onto public java.lang.String me.ankit.zooplus.controller.LoginController.registerUser()
+2018-05-10 13:11:06.086  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.newUser()
+2018-05-10 13:11:06.087  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.registeredUser()
+2018-05-10 13:11:06.109  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 13:11:06.110  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 13:11:06.248  INFO 20812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:11:06.249  INFO 20812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:11:07.392  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:onApplicationEvent
+2018-05-10 13:11:07.393  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:init
+2018-05-10 13:11:07.687  INFO 20812 --- [main] me.ankit.zooplus.logTest                 : Started logTest in 17.568 seconds (JVM running for 20.729)
+2018-05-10 13:11:08.078  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : logTest: Hello this is an info message
+2018-05-10 13:11:08.092  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [me.ankit.zooplus.ZooplusApplicationTests], using SpringBootContextLoader
+2018-05-10 13:11:08.094  INFO 20812 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [me.ankit.zooplus.ZooplusApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-10 13:11:08.094  INFO 20812 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [me.ankit.zooplus.ZooplusApplicationTests]: ZooplusApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-05-10 13:11:08.129  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration me.ankit.zooplus.ZooplusApplication for test class me.ankit.zooplus.ZooplusApplicationTests
+2018-05-10 13:11:08.134  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-10 13:11:08.135  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6009cd34, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@65844c96, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@25214797, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e5c8ef3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60928a61, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27358a19, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8077c97, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@22865072, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@563317c1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d5d3a5c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6e0d16a4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7e18ced7]
+2018-05-10 13:11:08.147  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : ZooplusApplicationTests :Hello this is an info message
+2018-05-10 13:11:08.267  INFO 20812 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:10:51 EDT 2018]; root of context hierarchy
+2018-05-10 13:11:08.275  INFO 20812 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:11:08.278  INFO 20812 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-10 13:11:08.332  INFO 20812 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-10 13:11:18.793  INFO 19884 --- [main] me.ankit.zooplus.ZooplusApplication      : Starting ZooplusApplication v0.0.1-SNAPSHOT on T60841YJKP32 with PID 19884 (C:\___\java\zooplus-SpringBoot\zooplus\target\zooplus-0.0.1-SNAPSHOT.jar started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 13:11:18.798  INFO 19884 --- [main] me.ankit.zooplus.ZooplusApplication      : No active profile set, falling back to default profiles: default
+2018-05-10 13:11:18.934  INFO 19884 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46f5f779: startup date [Thu May 10 13:11:18 EDT 2018]; root of context hierarchy
+2018-05-10 13:11:21.645  INFO 19884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3573abc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 13:11:22.417  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-10 13:11:22.491  INFO 19884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-10 13:11:22.496  INFO 19884 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-10 13:11:22.528  INFO 19884 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_71\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_71/jre/bin/server;C:/Program Files/Java/jdk1.8.0_71/jre/bin;C:/Program Files/Java/jdk1.8.0_71/jre/lib/amd64;C:\oracle\Client_11_2\bin\;C:\Oracle\x64Client_11_2_1\bin;JAVA_HOME;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\ant\ant_bin;C:\ant\ant_bin/bin;C:\Program Files\SlikSvn\bin\;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_71\bin\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\1E\NomadBranch\;C:\Program Files\apache-maven-3.5.3\bin;C:\Users\bhurata\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\bhurata\AppData\Local\Programs\Python\Python36-32\;C:\Users\bhurata\AppData\Roaming\npm;C:\Users\bhurata\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS;;.]
+2018-05-10 13:11:22.753  INFO 19884 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-10 13:11:22.755  INFO 19884 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3821 ms
+2018-05-10 13:11:23.086  INFO 19884 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-10 13:11:23.132  INFO 19884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-10 13:11:23.134  INFO 19884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-10 13:11:23.135  INFO 19884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-10 13:11:23.142  INFO 19884 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-10 13:11:23.635  INFO 19884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 13:11:24.186  INFO 19884 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose start
+2018-05-10 13:11:24.187  INFO 19884 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose synched
+2018-05-10 13:11:24.230  INFO 19884 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose script done
+2018-05-10 13:11:24.409  INFO 19884 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose end
+2018-05-10 13:11:24.416  INFO 19884 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-10 13:11:24.421  INFO 19884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-10 13:11:24.496  INFO 19884 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:11:24.529  INFO 19884 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 13:11:24.673  INFO 19884 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 13:11:24.675  INFO 19884 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 13:11:24.793  INFO 19884 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 13:11:25.160  INFO 19884 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-10 13:11:26.220  INFO 19884 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6bd61f98'
+2018-05-10 13:11:26.227  INFO 19884 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:11:27.120  INFO 19884 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:11:27.865  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46f5f779: startup date [Thu May 10 13:11:18 EDT 2018]; root of context hierarchy
+2018-05-10 13:11:27.984  WARN 19884 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-10 13:11:28.086  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.ConvertController.newUser()
+2018-05-10 13:11:28.091  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String me.ankit.zooplus.controller.HomeController.home()
+2018-05-10 13:11:28.094  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /]}" onto public java.lang.String me.ankit.zooplus.controller.LoginController.registerUser()
+2018-05-10 13:11:28.102  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.registeredUser()
+2018-05-10 13:11:28.109  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.newUser()
+2018-05-10 13:11:28.116  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 13:11:28.126  INFO 19884 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 13:11:28.205  INFO 19884 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:11:28.205  INFO 19884 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:11:28.914  INFO 19884 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-10 13:11:28.928  INFO 19884 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-10 13:11:28.944  INFO 19884 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-10 13:11:28.964  INFO 19884 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:onApplicationEvent
+2018-05-10 13:11:28.966  INFO 19884 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:init
+2018-05-10 13:11:29.515  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-10 13:11:29.525  INFO 19884 --- [main] me.ankit.zooplus.ZooplusApplication      : Started ZooplusApplication in 11.63 seconds (JVM running for 12.603)
+2018-05-10 13:11:29.529 ERROR 19884 --- [main] me.ankit.zooplus.ILogging                : Test - fatal
+2018-05-10 13:11:29.531 ERROR 19884 --- [main] me.ankit.zooplus.ILogging                : Test - error
+2018-05-10 13:11:29.532  INFO 19884 --- [main] me.ankit.zooplus.ILogging                : Test - info
+2018-05-10 13:57:05.277  INFO 19884 --- [Thread-4] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@46f5f779: startup date [Thu May 10 13:11:18 EDT 2018]; root of context hierarchy
+2018-05-10 13:57:05.379  INFO 19884 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-10 13:57:05.383  INFO 19884 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-10 13:57:05.401  INFO 19884 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:57:05.420  INFO 19884 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-10 13:57:05.475  INFO 19884 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-10 13:57:43.464  INFO 20812 --- [main] me.ankit.zooplus.logTest                 : Starting logTest on T60841YJKP32 with PID 20812 (started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 13:57:43.468  INFO 20812 --- [main] me.ankit.zooplus.logTest                 : No active profile set, falling back to default profiles: default
+2018-05-10 13:57:43.586  INFO 20812 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:57:43 EDT 2018]; root of context hierarchy
+2018-05-10 13:57:49.097  INFO 20812 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3b4495bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 13:57:49.914  INFO 20812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 13:57:50.795  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose start
+2018-05-10 13:57:50.796  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose synched
+2018-05-10 13:57:50.832  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose script done
+2018-05-10 13:57:50.902  INFO 20812 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose end
+2018-05-10 13:57:50.916  INFO 20812 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-10 13:57:50.921  INFO 20812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-10 13:57:51.049  INFO 20812 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:57:51.124  INFO 20812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 13:57:51.367  INFO 20812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 13:57:51.375  INFO 20812 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 13:57:51.582  INFO 20812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 13:57:51.885  INFO 20812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-10 13:57:54.852  INFO 20812 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@47272cd3'
+2018-05-10 13:57:54.861  INFO 20812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:57:57.215  INFO 20812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:57:58.864  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:57:43 EDT 2018]; root of context hierarchy
+2018-05-10 13:57:59.060  WARN 20812 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-10 13:57:59.317  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.ConvertController.newUser()
+2018-05-10 13:57:59.322  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String me.ankit.zooplus.controller.HomeController.home()
+2018-05-10 13:57:59.324  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /]}" onto public java.lang.String me.ankit.zooplus.controller.LoginController.registerUser()
+2018-05-10 13:57:59.330  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.newUser()
+2018-05-10 13:57:59.347  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.registeredUser()
+2018-05-10 13:57:59.349  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.UserController.getAllUsers(org.springframework.ui.Model)
+2018-05-10 13:57:59.368  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 13:57:59.374  INFO 20812 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 13:57:59.493  INFO 20812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:57:59.493  INFO 20812 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:58:00.802  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:onApplicationEvent
+2018-05-10 13:58:00.811  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:init
+2018-05-10 13:58:01.217  INFO 20812 --- [main] me.ankit.zooplus.logTest                 : Started logTest in 18.931 seconds (JVM running for 22.063)
+2018-05-10 13:58:01.871  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : logTest: Hello this is an info message
+2018-05-10 13:58:01.886  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [me.ankit.zooplus.ZooplusApplicationTests], using SpringBootContextLoader
+2018-05-10 13:58:01.891  INFO 20812 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [me.ankit.zooplus.ZooplusApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-10 13:58:01.891  INFO 20812 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [me.ankit.zooplus.ZooplusApplicationTests]: ZooplusApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-05-10 13:58:01.897  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration me.ankit.zooplus.ZooplusApplication for test class me.ankit.zooplus.ZooplusApplicationTests
+2018-05-10 13:58:01.902  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-10 13:58:01.906  INFO 20812 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@58601e7a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62735b13, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7aae1170, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4ef5dd23, org.springframework.test.context.support.DirtiesContextTestExecutionListener@163e8949, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6eede35e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@64c25a62, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@43e8f1c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66a82a13, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@675ec28b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@11399548, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@610fbe1c]
+2018-05-10 13:58:01.930  INFO 20812 --- [main] me.ankit.zooplus.ILogging                : ZooplusApplicationTests :Hello this is an info message
+2018-05-10 13:58:03.317  INFO 20812 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 13:57:43 EDT 2018]; root of context hierarchy
+2018-05-10 13:58:03.324  INFO 20812 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:58:03.329  INFO 20812 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-10 13:58:03.396  INFO 20812 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-10 13:58:11.598  INFO 14308 --- [main] me.ankit.zooplus.ZooplusApplication      : Starting ZooplusApplication v0.0.1-SNAPSHOT on T60841YJKP32 with PID 14308 (C:\___\java\zooplus-SpringBoot\zooplus\target\zooplus-0.0.1-SNAPSHOT.jar started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 13:58:11.625  INFO 14308 --- [main] me.ankit.zooplus.ZooplusApplication      : No active profile set, falling back to default profiles: default
+2018-05-10 13:58:11.798  INFO 14308 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Thu May 10 13:58:11 EDT 2018]; root of context hierarchy
+2018-05-10 13:58:15.958  INFO 14308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c74c8b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 13:58:17.415  INFO 14308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-10 13:58:17.532  INFO 14308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-10 13:58:17.533  INFO 14308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-10 13:58:17.577  INFO 14308 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_71\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_71/jre/bin/server;C:/Program Files/Java/jdk1.8.0_71/jre/bin;C:/Program Files/Java/jdk1.8.0_71/jre/lib/amd64;C:\oracle\Client_11_2\bin\;C:\Oracle\x64Client_11_2_1\bin;JAVA_HOME;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\ant\ant_bin;C:\ant\ant_bin/bin;C:\Program Files\SlikSvn\bin\;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_71\bin\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\1E\NomadBranch\;C:\Program Files\apache-maven-3.5.3\bin;C:\Users\bhurata\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\bhurata\AppData\Local\Programs\Python\Python36-32\;C:\Users\bhurata\AppData\Roaming\npm;C:\Users\bhurata\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS;;.]
+2018-05-10 13:58:17.915  INFO 14308 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-10 13:58:17.918  INFO 14308 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6121 ms
+2018-05-10 13:58:18.568  INFO 14308 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-10 13:58:18.584  INFO 14308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-10 13:58:18.585  INFO 14308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-10 13:58:18.586  INFO 14308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-10 13:58:18.603  INFO 14308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-10 13:58:19.419  INFO 14308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 13:58:20.082  INFO 14308 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose start
+2018-05-10 13:58:20.082  INFO 14308 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose synched
+2018-05-10 13:58:20.160  INFO 14308 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose script done
+2018-05-10 13:58:20.231  INFO 14308 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose end
+2018-05-10 13:58:20.244  INFO 14308 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-10 13:58:20.251  INFO 14308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-10 13:58:20.388  INFO 14308 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:58:20.431  INFO 14308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 13:58:20.608  INFO 14308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 13:58:20.611  INFO 14308 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 13:58:20.748  INFO 14308 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 13:58:21.250  INFO 14308 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-10 13:58:22.818  INFO 14308 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5d534f5d'
+2018-05-10 13:58:22.825  INFO 14308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 13:58:24.327  INFO 14308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:58:25.326  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Thu May 10 13:58:11 EDT 2018]; root of context hierarchy
+2018-05-10 13:58:25.519  WARN 14308 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-10 13:58:25.701  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.ConvertController.newUser()
+2018-05-10 13:58:25.712  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String me.ankit.zooplus.controller.HomeController.home()
+2018-05-10 13:58:25.717  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /]}" onto public java.lang.String me.ankit.zooplus.controller.LoginController.registerUser()
+2018-05-10 13:58:25.762  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.newUser()
+2018-05-10 13:58:25.786  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.registeredUser()
+2018-05-10 13:58:25.796  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.UserController.getAllUsers(org.springframework.ui.Model)
+2018-05-10 13:58:25.817  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 13:58:25.820  INFO 14308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 13:58:26.008  INFO 14308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:58:26.029  INFO 14308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 13:58:27.333  INFO 14308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-10 13:58:27.341  INFO 14308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-10 13:58:27.360  INFO 14308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-10 13:58:27.399  INFO 14308 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:onApplicationEvent
+2018-05-10 13:58:27.415  INFO 14308 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:init
+2018-05-10 13:58:27.938  INFO 14308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-10 13:58:27.953  INFO 14308 --- [main] me.ankit.zooplus.ZooplusApplication      : Started ZooplusApplication in 18.082 seconds (JVM running for 19.643)
+2018-05-10 13:58:27.960 ERROR 14308 --- [main] me.ankit.zooplus.ILogging                : Test - fatal
+2018-05-10 13:58:27.965 ERROR 14308 --- [main] me.ankit.zooplus.ILogging                : Test - error
+2018-05-10 13:58:27.965  INFO 14308 --- [main] me.ankit.zooplus.ILogging                : Test - info
+2018-05-10 13:58:52.516  INFO 14308 --- [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-10 13:58:52.516  INFO 14308 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-10 13:58:52.570  INFO 14308 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 54 ms
+2018-05-10 13:58:52.827  INFO 14308 --- [http-nio-8080-exec-10] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-05-10 14:15:53.086  INFO 14308 --- [Thread-4] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Thu May 10 13:58:11 EDT 2018]; root of context hierarchy
+2018-05-10 14:15:53.086  INFO 14308 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-10 14:15:53.086  INFO 14308 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-10 14:15:53.086  INFO 14308 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 14:15:53.086  INFO 14308 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-10 14:15:53.158  INFO 14308 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-10 14:16:17.515  INFO 21044 --- [main] me.ankit.zooplus.logTest                 : Starting logTest on T60841YJKP32 with PID 21044 (started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 14:16:17.518  INFO 21044 --- [main] me.ankit.zooplus.logTest                 : No active profile set, falling back to default profiles: default
+2018-05-10 14:16:17.614  INFO 21044 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 14:16:17 EDT 2018]; root of context hierarchy
+2018-05-10 14:16:20.713  INFO 21044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fc2e4596] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 14:16:21.249  INFO 21044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 14:16:21.814  INFO 21044 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose start
+2018-05-10 14:16:21.814  INFO 21044 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose synched
+2018-05-10 14:16:21.861  INFO 21044 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose script done
+2018-05-10 14:16:21.946  INFO 21044 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose end
+2018-05-10 14:16:21.946  INFO 21044 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-10 14:16:21.946  INFO 21044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-10 14:16:22.078  INFO 21044 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 14:16:22.099  INFO 21044 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 14:16:22.231  INFO 21044 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 14:16:22.246  INFO 21044 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 14:16:22.347  INFO 21044 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 14:16:22.663  INFO 21044 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-10 14:16:24.256  INFO 21044 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@707ca986'
+2018-05-10 14:16:24.256  INFO 21044 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 14:16:25.752  INFO 21044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 14:16:26.517  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 14:16:17 EDT 2018]; root of context hierarchy
+2018-05-10 14:16:26.692  WARN 21044 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-10 14:16:26.802  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.ConvertController.newUser()
+2018-05-10 14:16:26.806  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String me.ankit.zooplus.controller.HomeController.home()
+2018-05-10 14:16:26.809  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /]}" onto public java.lang.String me.ankit.zooplus.controller.LoginController.registerUser()
+2018-05-10 14:16:26.812  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.registeredUser()
+2018-05-10 14:16:26.813  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.newUser()
+2018-05-10 14:16:26.815  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.UserController.getAllUsers(org.springframework.ui.Model)
+2018-05-10 14:16:26.819  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 14:16:26.821  INFO 21044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 14:16:26.897  INFO 21044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 14:16:26.897  INFO 21044 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 14:16:27.785  INFO 21044 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:onApplicationEvent
+2018-05-10 14:16:27.787  INFO 21044 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:init
+2018-05-10 14:16:27.944  INFO 21044 --- [main] me.ankit.zooplus.logTest                 : Started logTest in 11.175 seconds (JVM running for 13.202)
+2018-05-10 14:16:28.171  INFO 21044 --- [main] me.ankit.zooplus.ILogging                : logTest: Hello this is an info message
+2018-05-10 14:16:28.181  INFO 21044 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [me.ankit.zooplus.ZooplusApplicationTests], using SpringBootContextLoader
+2018-05-10 14:16:28.183  INFO 21044 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [me.ankit.zooplus.ZooplusApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-05-10 14:16:28.183  INFO 21044 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [me.ankit.zooplus.ZooplusApplicationTests]: ZooplusApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-05-10 14:16:28.196  INFO 21044 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration me.ankit.zooplus.ZooplusApplication for test class me.ankit.zooplus.ZooplusApplicationTests
+2018-05-10 14:16:28.250  INFO 21044 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-05-10 14:16:28.253  INFO 21044 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6eede35e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@64c25a62, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@43e8f1c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@66a82a13, org.springframework.test.context.support.DirtiesContextTestExecutionListener@675ec28b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@11399548, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@610fbe1c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@46d0f89c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@570b2057, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a457c2b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@16a6dc21, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5773d271]
+2018-05-10 14:16:28.261  INFO 21044 --- [main] me.ankit.zooplus.ILogging                : ZooplusApplicationTests :Hello this is an info message
+2018-05-10 14:16:28.554  INFO 21044 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3e78b6a5: startup date [Thu May 10 14:16:17 EDT 2018]; root of context hierarchy
+2018-05-10 14:16:28.563  INFO 21044 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 14:16:28.566  INFO 21044 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-10 14:16:28.594  INFO 21044 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-10 14:16:33.902  INFO 3252 --- [main] me.ankit.zooplus.ZooplusApplication      : Starting ZooplusApplication v0.0.1-SNAPSHOT on T60841YJKP32 with PID 3252 (C:\___\java\zooplus-SpringBoot\zooplus\target\zooplus-0.0.1-SNAPSHOT.jar started by bhurata in C:\___\java\zooplus-SpringBoot\zooplus)
+2018-05-10 14:16:33.927  INFO 3252 --- [main] me.ankit.zooplus.ZooplusApplication      : No active profile set, falling back to default profiles: default
+2018-05-10 14:16:34.078  INFO 3252 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Thu May 10 14:16:34 EDT 2018]; root of context hierarchy
+2018-05-10 14:16:36.770  INFO 3252 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b6b40b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-10 14:16:37.583  INFO 3252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-05-10 14:16:37.630  INFO 3252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-10 14:16:37.630  INFO 3252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-10 14:16:37.646  INFO 3252 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_71\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_71/jre/bin/server;C:/Program Files/Java/jdk1.8.0_71/jre/bin;C:/Program Files/Java/jdk1.8.0_71/jre/lib/amd64;C:\oracle\Client_11_2\bin\;C:\Oracle\x64Client_11_2_1\bin;JAVA_HOME;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\ant\ant_bin;C:\ant\ant_bin/bin;C:\Program Files\SlikSvn\bin\;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_71\bin\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\1E\NomadBranch\;C:\Program Files\apache-maven-3.5.3\bin;C:\Users\bhurata\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\bhurata\AppData\Local\Programs\Python\Python36-32\;C:\Users\bhurata\AppData\Roaming\npm;C:\Users\bhurata\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS;;.]
+2018-05-10 14:16:37.799  INFO 3252 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-10 14:16:37.799  INFO 3252 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3721 ms
+2018-05-10 14:16:38.115  INFO 3252 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-10 14:16:38.160  INFO 3252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-10 14:16:38.164  INFO 3252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-10 14:16:38.165  INFO 3252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-10 14:16:38.165  INFO 3252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-10 14:16:38.738  INFO 3252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-10 14:16:39.274  INFO 3252 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose start
+2018-05-10 14:16:39.274  INFO 3252 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose synched
+2018-05-10 14:16:39.327  INFO 3252 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose script done
+2018-05-10 14:16:39.459  INFO 3252 --- [main] hsqldb.db.HSQLDB634B08CCE6.ENGINE        : checkpointClose end
+2018-05-10 14:16:39.474  INFO 3252 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-05-10 14:16:39.474  INFO 3252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-10 14:16:39.574  INFO 3252 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-10 14:16:39.597  INFO 3252 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-10 14:16:39.788  INFO 3252 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-10 14:16:39.797  INFO 3252 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-10 14:16:39.880  INFO 3252 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-10 14:16:40.185  INFO 3252 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-05-10 14:16:41.056  INFO 3252 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2e3967ea'
+2018-05-10 14:16:41.056  INFO 3252 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-10 14:16:41.784  INFO 3252 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 14:16:42.382  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Thu May 10 14:16:34 EDT 2018]; root of context hierarchy
+2018-05-10 14:16:42.472  WARN 3252 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-10 14:16:42.557  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/convert],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.ConvertController.newUser()
+2018-05-10 14:16:42.562  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home]}" onto public java.lang.String me.ankit.zooplus.controller.HomeController.home()
+2018-05-10 14:16:42.568  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /]}" onto public java.lang.String me.ankit.zooplus.controller.LoginController.registerUser()
+2018-05-10 14:16:42.598  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.registeredUser()
+2018-05-10 14:16:42.604  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.RegisterController.newUser()
+2018-05-10 14:16:42.609  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.String me.ankit.zooplus.controller.UserController.getAllUsers(org.springframework.ui.Model)
+2018-05-10 14:16:42.614  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-10 14:16:42.616  INFO 3252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-10 14:16:42.701  INFO 3252 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 14:16:42.715  INFO 3252 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-10 14:16:43.361  INFO 3252 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-10 14:16:43.363  INFO 3252 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-10 14:16:43.372  INFO 3252 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-10 14:16:43.394  INFO 3252 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:onApplicationEvent
+2018-05-10 14:16:43.398  INFO 3252 --- [main] me.ankit.zooplus.ILogging                : DevBootstrap:init
+2018-05-10 14:16:43.618  INFO 3252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-10 14:16:43.622  INFO 3252 --- [main] me.ankit.zooplus.ZooplusApplication      : Started ZooplusApplication in 10.559 seconds (JVM running for 11.468)
+2018-05-10 14:16:43.630 ERROR 3252 --- [main] me.ankit.zooplus.ILogging                : Test - fatal
+2018-05-10 14:16:43.632 ERROR 3252 --- [main] me.ankit.zooplus.ILogging                : Test - error
+2018-05-10 14:16:43.632  INFO 3252 --- [main] me.ankit.zooplus.ILogging                : Test - info
+2018-05-10 14:16:59.440  INFO 3252 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-10 14:16:59.440  INFO 3252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Users</title>
+<link rel="stylesheet" type="text/css" href="../css/styleSheet.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script language="JavaScript" src="../js/registration.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h1>List of Users</h1>
+
+	<div class="row">
+		<div class="col-2">Id</div>
+		<div class="col-2">Email</div>
+	</div>
+
+	<div th:each="user : ${users}" class="row">
+
+		<div class="col-2 list-group">
+			<a href="#" class="list-group-item" th:text="${user.id}">123</a>
+		</div>
+		<div class="col-2 list-group">
+			<a href="#" class="list-group-item" th:text="${user.email}">ankit@gmail.com</a>
+		</div>
+
+	</div>
+
+</body>
+</html>
