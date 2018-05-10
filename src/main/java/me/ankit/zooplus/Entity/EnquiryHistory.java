@@ -15,12 +15,13 @@ import org.springframework.data.annotation.Reference;
 public class EnquiryHistory {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	//@Reference
-	//@OneToMany
-	private long user_id;
+	// @Reference
+	// @OneToMany
+	@NotNull
+	private Long user_id;
 
 	@NotNull
 	private String FromCurrency;
@@ -48,11 +49,11 @@ public class EnquiryHistory {
 		this.id = id;
 	}
 
-	public long getUser_id() {
+	public Long getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(long user_id) {
+	public void setUser_id(Long user_id) {
 		this.user_id = user_id;
 	}
 
@@ -103,12 +104,50 @@ public class EnquiryHistory {
 	public void setQueryDate(Date queryDate) {
 		QueryDate = queryDate;
 	}
+	
+	
+	public EnquiryHistory() {}
+	
+	
+	public EnquiryHistory(@NotNull Long user_id, @NotNull String fromCurrency, @NotNull String toCurrency,
+			@NotNull float fromAmount, @NotNull float toAmount, @NotNull int version, @NotNull Date queryDate) {
+		super();		
+		this.user_id = user_id;
+		FromCurrency = fromCurrency;
+		ToCurrency = toCurrency;
+		FromAmount = fromAmount;
+		ToAmount = toAmount;
+		this.version = version;
+		QueryDate = queryDate;
+	}
 
 	@Override
 	public String toString() {
 		return "EnquiryHistory [id=" + id + ", user_id=" + user_id + ", FromCurrency=" + FromCurrency + ", ToCurrency="
 				+ ToCurrency + ", FromAmount=" + FromAmount + ", ToAmount=" + ToAmount + ", version=" + version
 				+ ", QueryDate=" + QueryDate + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		EnquiryHistory other = (EnquiryHistory) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 
 }

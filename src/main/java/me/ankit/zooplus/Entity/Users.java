@@ -1,7 +1,5 @@
 package me.ankit.zooplus.Entity;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +10,8 @@ import javax.validation.constraints.NotNull;;
 public class Users {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long Id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long Id;
 
 	@NotNull
 	private String Email;
@@ -25,13 +23,13 @@ public class Users {
 	private String Version;
 
 	@NotNull
-	private Date LastLogin;
+	private String LastLogin;
 
-	public long getId() {
+	public Long getId() {
 		return Id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		Id = id;
 	}
 
@@ -59,11 +57,22 @@ public class Users {
 		Version = version;
 	}
 
-	public Date getLastLogin() {
+	public String getLastLogin() {
 		return LastLogin;
 	}
 
-	public void setLastLogin(Date lastLogin) {
+	public void setLastLogin(String lastLogin) {
+		LastLogin = lastLogin;
+	}
+
+	public Users() {
+	}
+
+	public Users(@NotNull String email, @NotNull String password, @NotNull String version, @NotNull String lastLogin) {
+		super();
+		Email = email;
+		Password = password;
+		Version = version;
 		LastLogin = lastLogin;
 	}
 
@@ -71,6 +80,28 @@ public class Users {
 	public String toString() {
 		return "Users [Id=" + Id + ", Email=" + Email + ", Password=" + Password + ", Version=" + Version
 				+ ", LastLogin=" + LastLogin + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (Id ^ (Id >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Users other = (Users) obj;
+		if (Id != other.Id)
+			return false;
+		return true;
 	}
 
 }
