@@ -23,7 +23,7 @@ public class RegisterController implements ILogging {
 		Log.info("RegisterController:registeredUser");
 
 		Log.info(user);		
-		user.setId(12L);
+		user.setVersion(1);
 
 		Log.info(user);
 

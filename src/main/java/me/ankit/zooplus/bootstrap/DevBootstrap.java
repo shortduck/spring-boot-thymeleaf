@@ -23,15 +23,15 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent>,
 
 	public void init() {
 
-		Users ankit = new Users("email", "password", "version",
+		Users ankit = new Users("email", "password", 1,
 				new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()));
 
-		Users pinki = new Users("email-pinki", "password-pinki", "version",
+		Users pinki = new Users("email-pinki", "password-pinki", 1,
 				new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()));
 
 		Log.info("DevBootstrap:init");
 		userRepository.save(ankit);
-		
+
 		userRepository.save(pinki);
 
 	}

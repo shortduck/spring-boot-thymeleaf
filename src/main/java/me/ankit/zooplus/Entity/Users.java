@@ -20,9 +20,8 @@ public class Users {
 	private String Password;
 
 	@NotNull
-	private String Version;
+	private int Version;
 
-	@NotNull
 	private String LastLogin;
 
 	public Long getId() {
@@ -49,11 +48,11 @@ public class Users {
 		Password = password;
 	}
 
-	public String getVersion() {
+	public int getVersion() {
 		return Version;
 	}
 
-	public void setVersion(String version) {
+	public void setVersion(int version) {
 		Version = version;
 	}
 
@@ -68,7 +67,7 @@ public class Users {
 	public Users() {
 	}
 
-	public Users(@NotNull String email, @NotNull String password, @NotNull String version, @NotNull String lastLogin) {
+	public Users(@NotNull String email, @NotNull String password, @NotNull int version, String lastLogin) {
 		super();
 		Email = email;
 		Password = password;
