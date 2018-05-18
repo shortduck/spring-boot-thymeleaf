@@ -5,4 +5,7 @@ public interface Iconstants {
 	public enum PAGES {
 		REGISTER, HOME, LOGIN, CONVERT, USERS;
 	}
+	
+	public final String ROOT_PATH = "/";
+	
 }
