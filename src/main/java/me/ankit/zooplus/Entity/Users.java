@@ -14,10 +14,13 @@ public class Users {
 	private Long Id;
 
 	@NotNull
-	private String Email;
+	private String Username;
 
 	@NotNull
 	private String Password;
+
+	@NotNull
+	private String Role;
 
 	@NotNull
 	private int Version;
@@ -32,12 +35,12 @@ public class Users {
 		Id = id;
 	}
 
-	public String getEmail() {
-		return Email;
+	public String getUsername() {
+		return Username;
 	}
 
-	public void setEmail(String email) {
-		Email = email;
+	public void setUsername(String username) {
+		Username = username;
 	}
 
 	public String getPassword() {
@@ -46,6 +49,14 @@ public class Users {
 
 	public void setPassword(String password) {
 		Password = password;
+	}
+
+	public String getRole() {
+		return Role;
+	}
+
+	public void setRole(String role) {
+		Role = role;
 	}
 
 	public int getVersion() {
@@ -67,18 +78,20 @@ public class Users {
 	public Users() {
 	}
 
-	public Users(@NotNull String email, @NotNull String password, @NotNull int version, String lastLogin) {
+	public Users(@NotNull String username, @NotNull String password, @NotNull String role, @NotNull int version,
+			String lastLogin) {
 		super();
-		Email = email;
+		Username = username;
 		Password = password;
+		Role = role;
 		Version = version;
 		LastLogin = lastLogin;
 	}
 
 	@Override
 	public String toString() {
-		return "Users [Id=" + Id + ", Email=" + Email + ", Password=" + Password + ", Version=" + Version
-				+ ", LastLogin=" + LastLogin + "]";
+		return "Users [Id=" + Id + ", Username=" + Username + ", Password=" + Password + ", Role=" + Role + ", Version="
+				+ Version + ", LastLogin=" + LastLogin + "]";
 	}
 
 	@Override
