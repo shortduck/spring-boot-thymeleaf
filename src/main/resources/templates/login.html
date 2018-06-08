@@ -28,20 +28,20 @@
 			<div class="col-md-4 login-sec">
 				<h2 class="text-center">Login Now</h2>
 
-				<form class="login-form">
+				<form class="login-form" th:action="@{/login}" method="post">
 					<div class="form-group">
 						<label class="text-uppercase" for="exampleInputEmail1">Username</label>
 						<input class="form-control" oninput="setCustomValidity('')"
 							oninvalid="this.setCustomValidity('Please enter a valid email-address.')"
-							placeholder="email-address" required=""
-							title="format: xxx@xxx.xxx" type="email" />
+							placeholder="email-address" required="" autofocus="autofocus"
+							title="format: xxx@xxx.xxx" type="email" text="ankit@yahoo.com" id="username" name="username" />
 					</div>
 
 					<div class="form-group">
 						<label class="text-uppercase" for="exampleInputPassword1">Password</label>
 						<input class="form-control" oninput="setCustomValidity('')"
 							oninvalid="this.setCustomValidity('Please enter your password.')"
-							placeholder="password" required="" type="password" />
+							placeholder="password" required="" type="password" text="password" id="password" name="password" />
 					</div>
 
 					<div class="form-check">
@@ -51,6 +51,9 @@
 						<button class="btn btn-login float-right" type="submit">Submit</button>
 					</div>
 				</form>
+				<div class="copy-text">
+					
+				</div>
 
 				<div class="copy-text">
 					<a href="register">New User ? Register here</a>
