@@ -1,9 +1,13 @@
 package me.ankit.zooplus.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;;
 
 @Entity
@@ -24,6 +28,9 @@ public class Users {
 
 	@NotNull
 	private int Version;
+	
+	@OneToMany (mappedBy = "user")
+	private List<EnquiryHistory> enquiries = new ArrayList<>();
 
 	private String LastLogin;
 
@@ -58,9 +65,17 @@ public class Users {
 	public void setRole(String role) {
 		Role = role;
 	}
-
+	
 	public int getVersion() {
 		return Version;
+	}
+
+	public List<EnquiryHistory> getEnquiries() {
+		return enquiries;
+	}
+
+	public void setEnquiries(ArrayList<EnquiryHistory> enquiries) {
+		this.enquiries = enquiries;
 	}
 
 	public void setVersion(int version) {

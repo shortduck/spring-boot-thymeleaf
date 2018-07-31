@@ -1,28 +1,26 @@
 package me.ankit.zooplus.Entity;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.data.annotation.Reference;
 
 @Entity
 public class EnquiryHistory {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
-
-	// @Reference
-	// @OneToMany
-	@NotNull
-	private Long user_id;
-
+	private long id;	
+	
+	@ManyToOne // (mappedBy = "enquiries")
+	@JoinColumn(name="user_id")
+	private Users user;
+	//private List<Users> users_list= new ArrayList<>();
+		
 	@NotNull
 	private String FromCurrency;
 
@@ -39,7 +37,7 @@ public class EnquiryHistory {
 	private int version;
 
 	@NotNull
-	private Date QueryDate;
+	private String QueryDate;
 
 	public long getId() {
 		return id;
@@ -47,14 +45,6 @@ public class EnquiryHistory {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public Long getUser_id() {
-		return user_id;
-	}
-
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
 	}
 
 	public String getFromCurrency() {
@@ -97,22 +87,23 @@ public class EnquiryHistory {
 		this.version = version;
 	}
 
-	public Date getQueryDate() {
+	public String getQueryDate() {
 		return QueryDate;
 	}
 
-	public void setQueryDate(Date queryDate) {
+	public void setQueryDate(String queryDate) {
 		QueryDate = queryDate;
 	}
 	
 	
 	public EnquiryHistory() {}
 	
-	
-	public EnquiryHistory(@NotNull Long user_id, @NotNull String fromCurrency, @NotNull String toCurrency,
-			@NotNull float fromAmount, @NotNull float toAmount, @NotNull int version, @NotNull Date queryDate) {
-		super();		
-		this.user_id = user_id;
+
+	public EnquiryHistory(/*long id, Users user_id, */@NotNull String fromCurrency, @NotNull String toCurrency,
+			@NotNull float fromAmount, @NotNull float toAmount, @NotNull int version, @NotNull String queryDate) {
+		super();
+		//this.id = id;
+		//this.user_id = user_id;
 		FromCurrency = fromCurrency;
 		ToCurrency = toCurrency;
 		FromAmount = fromAmount;
@@ -120,13 +111,13 @@ public class EnquiryHistory {
 		this.version = version;
 		QueryDate = queryDate;
 	}
-
+/*
 	@Override
 	public String toString() {
-		return "EnquiryHistory [id=" + id + ", user_id=" + user_id + ", FromCurrency=" + FromCurrency + ", ToCurrency="
+		return "EnquiryHistory [id=" + id + ", user=" + user_id + ", FromCurrency=" + FromCurrency + ", ToCurrency="
 				+ ToCurrency + ", FromAmount=" + FromAmount + ", ToAmount=" + ToAmount + ", version=" + version
 				+ ", QueryDate=" + QueryDate + "]";
-	}
+	}*/
 
 	@Override
 	public int hashCode() {
