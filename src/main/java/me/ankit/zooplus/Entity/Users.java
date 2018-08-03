@@ -21,8 +21,8 @@ public class Users {
 	private String Username;
 
 	@NotNull
-	private String Password;
-
+	private String Password;	
+	
 	@NotNull
 	private String Role;
 

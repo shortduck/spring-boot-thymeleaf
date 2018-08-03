@@ -26,7 +26,9 @@
 			<a href="#" class="list-group-item" th:text="${user.id}">123</a>
 		</div>
 		<div class="col-2 list-group">
-			<a href="#" class="list-group-item" th:text="${user.email}">ankit@gmail.com</a>
+			<!-- 			<a th:href="@{'/user/' + ${user.id}}"  class="list-group-item" th:text="${user.Username}">ankit@gmail.com</a> -->
+			<a th:href="@{/user/{param}(param=${user.id})}" class="list-group-item"
+				th:text="${user.Username}">ankit@gmail.com</a>
 		</div>
 
 	</div>
