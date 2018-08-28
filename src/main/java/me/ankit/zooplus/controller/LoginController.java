@@ -26,19 +26,19 @@ public class LoginController implements ILogging {
 		return Iconstants.PAGES.LOGIN.toString().toLowerCase();
 	}
 
-	/*
-	 * @PostMapping({ "/login" }) public String loginProcessing() {
-	 * 
-	 * Log.info("LoginController:loginProcessing()");
-	 * 
-	 * User user = (User)
-	 * SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	 * 
-	 * Log.info("Login user is : " + user.getUsername());
-	 * 
-	 * return Iconstants.PAGES.CONVERT.toString().toLowerCase();
-	 * 
-	 * }
-	 */
+	
+//	  @PostMapping({ "/login" }) public String loginProcessing() {
+//	  
+//	  Log.info("LoginController:loginProcessing()");
+//	  
+//	  User user = (User)
+//	  SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//	  
+//	  Log.info("Login user is : " + user.getUsername());
+//	  
+//	  return Iconstants.PAGES.CONVERT.toString().toLowerCase();
+//	  
+//	  }
+	 
 
 }

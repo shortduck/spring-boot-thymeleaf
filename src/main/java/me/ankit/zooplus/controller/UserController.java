@@ -1,12 +1,14 @@
 package me.ankit.zooplus.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import me.ankit.zooplus.ILogging;
 import me.ankit.zooplus.Iconstants;
@@ -19,6 +21,7 @@ public class UserController implements ILogging {
 	UserRepository userRepository;
 
 	@GetMapping("/users")
+	@ResponseStatus(HttpStatus.PAYLOAD_TOO_LARGE)
 	public String getAllUsers(Model model) {
 
 		model.addAttribute("users", userRepository.findAll());
@@ -34,8 +37,6 @@ public class UserController implements ILogging {
 
 		model.addAttribute("user", userRepository.findById(userId).get());
 		
-		//model.addAttribute("test", "Ankit");
-
 		return "user";
 	}
 

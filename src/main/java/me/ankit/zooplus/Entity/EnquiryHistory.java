@@ -16,11 +16,10 @@ public class EnquiryHistory {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;	
 	
-	@ManyToOne // (mappedBy = "enquiries")
+	@ManyToOne
 	@JoinColumn(name="user_id")
 	private Users user;
-	//private List<Users> users_list= new ArrayList<>();
-		
+	
 	@NotNull
 	private String FromCurrency;
 
@@ -111,13 +110,13 @@ public class EnquiryHistory {
 		this.version = version;
 		QueryDate = queryDate;
 	}
-/*
+
 	@Override
 	public String toString() {
-		return "EnquiryHistory [id=" + id + ", user=" + user_id + ", FromCurrency=" + FromCurrency + ", ToCurrency="
+		return "EnquiryHistory [id=" + id + ", user=" + user + ", FromCurrency=" + FromCurrency + ", ToCurrency="
 				+ ToCurrency + ", FromAmount=" + FromAmount + ", ToAmount=" + ToAmount + ", version=" + version
 				+ ", QueryDate=" + QueryDate + "]";
-	}*/
+	}
 
 	@Override
 	public int hashCode() {

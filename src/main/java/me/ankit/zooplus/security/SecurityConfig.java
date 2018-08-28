@@ -34,15 +34,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements ILog
 
 		http.authorizeRequests()
 				.antMatchers(Iconstants.ROOT_PATH + Iconstants.PAGES.CONVERT.toString().toLowerCase() ,
-				Iconstants.ROOT_PATH + Iconstants.PAGES.USERS.toString().toLowerCase())						
+				Iconstants.ROOT_PATH + Iconstants.PAGES.USERS.toString().toLowerCase() ,
+				"/user/{userID}"
+						)						
 				.authenticated()				
 				.anyRequest()
 				.permitAll()				
 				.and()
 				.formLogin()
 				.loginPage(Iconstants.ROOT_PATH + Iconstants.PAGES.LOGIN.toString().toLowerCase())				
-				.successForwardUrl(Iconstants.ROOT_PATH + Iconstants.PAGES.CONVERT.toString().toLowerCase())				
-								
+				.defaultSuccessUrl(Iconstants.ROOT_PATH + Iconstants.PAGES.CONVERT.toString().toLowerCase(), false)		
 				.and()
 				.logout()				
 				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
